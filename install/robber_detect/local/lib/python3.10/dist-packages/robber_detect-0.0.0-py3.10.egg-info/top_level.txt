@@ -1,0 +1,1 @@
+/home/tolasing/main_ws/ai_ws/build/robber_detect/ament_cmake_python/robber_detect/robber_detect.egg-info/top_level.txt

@@ -1,0 +1,1 @@
+/home/tolasing/main_ws/ai_ws/build/robber_detect/ament_cmake_environment_hooks/local_setup.bash

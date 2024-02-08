@@ -1,0 +1,50 @@
+Built target ament_cmake_python_symlink_robber_detect
+running egg_info
+writing robber_detect.egg-info/PKG-INFO
+writing dependency_links to robber_detect.egg-info/dependency_links.txt
+writing top-level names to robber_detect.egg-info/top_level.txt
+reading manifest file 'robber_detect.egg-info/SOURCES.txt'
+writing manifest file 'robber_detect.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_robber_detect_egg
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/2detect.py
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/__pycache__/cvfpscalc.cpython-310.pyc
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/__pycache__/utils.cpython-310.pyc
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/cvfpscalc.py
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/detect.py
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/navigate_to_charging_dock_v4.py
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/object_broadcast.py
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/robber.tflite
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/robber2.tflite
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/robber3.tflite
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/robber5.tflite
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/robber6.tflite
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/test.py
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/utils.py
+-- Up-to-date symlink: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/__init__.py
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/pythonpath.sh
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/pythonpath.dsv
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect-0.0.0-py3.10.egg-info/PKG-INFO
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect-0.0.0-py3.10.egg-info/top_level.txt
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/__init__.py
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/lib/robber_detect/detect.py
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/ament_index/resource_index/package_run_dependencies/robber_detect
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/ament_index/resource_index/parent_prefix_path/robber_detect
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/ament_prefix_path.sh
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/ament_prefix_path.dsv
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/path.sh
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/path.dsv
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/local_setup.bash
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/local_setup.sh
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/local_setup.zsh
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/local_setup.dsv
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/package.dsv
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/ament_index/resource_index/packages/robber_detect
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/cmake/robber_detectConfig.cmake
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/cmake/robber_detectConfig-version.cmake
+-- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/package.xml
+Listing '/home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect'...
+Compiling '/home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/__init__.py'...

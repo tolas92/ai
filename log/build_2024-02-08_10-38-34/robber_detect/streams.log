@@ -1,0 +1,82 @@
+[0.077s] Invoking command in '/home/tolasing/main_ws/ai_ws/build/robber_detect': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/tolasing/main_ws/ai_ws/src/robber_detect -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tolasing/main_ws/ai_ws/install/robber_detect
+[0.223s] -- The C compiler identification is GNU 11.4.0
+[0.361s] -- The CXX compiler identification is GNU 11.4.0
+[0.372s] -- Detecting C compiler ABI info
+[0.481s] -- Detecting C compiler ABI info - done
+[0.495s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.495s] -- Detecting C compile features
+[0.496s] -- Detecting C compile features - done
+[0.500s] -- Detecting CXX compiler ABI info
+[0.649s] -- Detecting CXX compiler ABI info - done
+[0.661s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.661s] -- Detecting CXX compile features
+[0.661s] -- Detecting CXX compile features - done
+[0.665s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.922s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.001s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.088s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[1.144s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.151s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.161s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.178s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.201s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.294s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.297s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.470s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.506s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.577s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.590s] -- Looking for pthread.h
+[1.715s] -- Looking for pthread.h - found
+[1.716s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.889s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.891s] -- Found Threads: TRUE  
+[2.127s] -- Found rclpy: 3.3.11 (/opt/ros/humble/share/rclpy/cmake)
+[2.129s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.294s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.420s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.421s] -- Added test 'lint_cmake' to check CMake code style
+[2.422s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.426s] -- Added test 'xmllint' to check XML markup files
+[2.428s] -- Configuring done
+[2.437s] -- Generating done
+[2.439s] -- Build files have been written to: /home/tolasing/main_ws/ai_ws/build/robber_detect
+[2.453s] Invoked command in '/home/tolasing/main_ws/ai_ws/build/robber_detect' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/tolasing/main_ws/ai_ws/src/robber_detect -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tolasing/main_ws/ai_ws/install/robber_detect
+[2.457s] Invoking command in '/home/tolasing/main_ws/ai_ws/build/robber_detect': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tolasing/main_ws/ai_ws/build/robber_detect -- -j8 -l8
+[2.566s] Built target ament_cmake_python_symlink_robber_detect
+[2.899s] running egg_info
+[2.900s] creating robber_detect.egg-info
+[2.900s] writing robber_detect.egg-info/PKG-INFO
+[2.900s] writing dependency_links to robber_detect.egg-info/dependency_links.txt
+[2.901s] writing top-level names to robber_detect.egg-info/top_level.txt
+[2.901s] writing manifest file 'robber_detect.egg-info/SOURCES.txt'
+[2.903s] reading manifest file 'robber_detect.egg-info/SOURCES.txt'
+[2.904s] writing manifest file 'robber_detect.egg-info/SOURCES.txt'
+[2.953s] Built target ament_cmake_python_build_robber_detect_egg
+[2.988s] Invoked command in '/home/tolasing/main_ws/ai_ws/build/robber_detect' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/tolasing/main_ws/ai_ws/build/robber_detect -- -j8 -l8
+[3.085s] Invoking command in '/home/tolasing/main_ws/ai_ws/build/robber_detect': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tolasing/main_ws/ai_ws/build/robber_detect
+[3.108s] -- Install configuration: ""
+[3.109s] -- Execute custom install script
+[3.112s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/2detect.py
+[3.143s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/__pycache__/cvfpscalc.cpython-310.pyc
+[3.157s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/__pycache__/utils.cpython-310.pyc
+[3.185s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/cvfpscalc.py
+[3.211s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/detect.py
+[3.242s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/navigate_to_charging_dock_v4.py
+[3.272s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/object_broadcast.py
+[3.288s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/robber.tflite
+[3.302s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/robber2.tflite
+[3.317s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/robber3.tflite
+[3.331s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/robber5.tflite
+[3.360s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/robber6.tflite
+[3.390s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/test.py
+[3.419s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/utils.py
+[3.449s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/__init__.py
+[3.462s] [31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:100 (message):
+[3.463s]   ament_cmake_symlink_install_directory() can't find
+[3.463s]   '/home/tolasing/main_ws/ai_ws/src/robber_detect/launch'
+[3.463s] Call Stack (most recent call first):
+[3.463s]   ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:314 (ament_cmake_symlink_install_directory)
+[3.463s]   cmake_install.cmake:46 (include)
+[3.463s] 
+[3.463s] [0m
+[3.466s] Invoked command in '/home/tolasing/main_ws/ai_ws/build/robber_detect' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/tolasing/main_ws/ai_ws/build/robber_detect

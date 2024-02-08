@@ -1,0 +1,4 @@
+source;share/robber_detect/local_setup.bash
+source;share/robber_detect/local_setup.dsv
+source;share/robber_detect/local_setup.sh
+source;share/robber_detect/local_setup.zsh

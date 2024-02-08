@@ -1,0 +1,114 @@
+[0.216s] Invoking command in '/home/tolasing/main_ws/ai_ws/build/robber_detect': CMAKE_PREFIX_PATH=/home/tolasing/main_ws/dev_ws/install/motor_control:/home/tolasing/main_ws/dev_ws/install/imu_node:/opt/ros/humble:/home/tolasing/main_ws/dev_ws/install/serial:/home/tolasing/main_ws/dev_ws/install/ros2_mapping:/home/tolasing/main_ws/dev_ws/install/prototype:/home/tolasing/main_ws/dev_ws/install/plane:/home/tolasing/main_ws/dev_ws/install/navigator_planner:/home/tolasing/main_ws/dev_ws/install/depthai:/home/tolasing/main_ws/dev_ws/install/asio_cmake_module:/home/tolasing/main_ws/ai_ws/install/robber_detect /usr/bin/cmake /home/tolasing/main_ws/ai_ws/src/robber_detect -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tolasing/main_ws/ai_ws/install/robber_detect
+[0.411s] -- The C compiler identification is GNU 11.4.0
+[0.582s] -- The CXX compiler identification is GNU 11.4.0
+[0.602s] -- Detecting C compiler ABI info
+[0.786s] -- Detecting C compiler ABI info - done
+[0.801s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.802s] -- Detecting C compile features
+[0.803s] -- Detecting C compile features - done
+[0.812s] -- Detecting CXX compiler ABI info
+[1.031s] -- Detecting CXX compiler ABI info - done
+[1.055s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.055s] -- Detecting CXX compile features
+[1.057s] -- Detecting CXX compile features - done
+[1.070s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.460s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.599s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.717s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[1.840s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.856s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.879s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.916s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.968s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.146s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.155s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[2.238s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[2.270s] -- Looking for pthread.h
+[2.458s] -- Looking for pthread.h - found
+[2.458s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.634s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.636s] -- Found Threads: TRUE  
+[2.981s] -- Found rclpy: 3.3.11 (/opt/ros/humble/share/rclpy/cmake)
+[2.988s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[3.200s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.434s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.436s] -- Added test 'lint_cmake' to check CMake code style
+[3.437s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.443s] -- Added test 'xmllint' to check XML markup files
+[3.448s] -- Configuring done
+[3.461s] -- Generating done
+[3.464s] -- Build files have been written to: /home/tolasing/main_ws/ai_ws/build/robber_detect
+[3.485s] Invoked command in '/home/tolasing/main_ws/ai_ws/build/robber_detect' returned '0': CMAKE_PREFIX_PATH=/home/tolasing/main_ws/dev_ws/install/motor_control:/home/tolasing/main_ws/dev_ws/install/imu_node:/opt/ros/humble:/home/tolasing/main_ws/dev_ws/install/serial:/home/tolasing/main_ws/dev_ws/install/ros2_mapping:/home/tolasing/main_ws/dev_ws/install/prototype:/home/tolasing/main_ws/dev_ws/install/plane:/home/tolasing/main_ws/dev_ws/install/navigator_planner:/home/tolasing/main_ws/dev_ws/install/depthai:/home/tolasing/main_ws/dev_ws/install/asio_cmake_module:/home/tolasing/main_ws/ai_ws/install/robber_detect /usr/bin/cmake /home/tolasing/main_ws/ai_ws/src/robber_detect -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tolasing/main_ws/ai_ws/install/robber_detect
+[3.489s] Invoking command in '/home/tolasing/main_ws/ai_ws/build/robber_detect': CMAKE_PREFIX_PATH=/home/tolasing/main_ws/dev_ws/install/motor_control:/home/tolasing/main_ws/dev_ws/install/imu_node:/opt/ros/humble:/home/tolasing/main_ws/dev_ws/install/serial:/home/tolasing/main_ws/dev_ws/install/ros2_mapping:/home/tolasing/main_ws/dev_ws/install/prototype:/home/tolasing/main_ws/dev_ws/install/plane:/home/tolasing/main_ws/dev_ws/install/navigator_planner:/home/tolasing/main_ws/dev_ws/install/depthai:/home/tolasing/main_ws/dev_ws/install/asio_cmake_module:/home/tolasing/main_ws/ai_ws/install/robber_detect /usr/bin/cmake --build /home/tolasing/main_ws/ai_ws/build/robber_detect -- -j8 -l8
+[3.682s] Built target ament_cmake_python_symlink_robber_detect
+[4.234s] running egg_info
+[4.234s] creating robber_detect.egg-info
+[4.235s] writing robber_detect.egg-info/PKG-INFO
+[4.235s] writing dependency_links to robber_detect.egg-info/dependency_links.txt
+[4.236s] writing top-level names to robber_detect.egg-info/top_level.txt
+[4.237s] writing manifest file 'robber_detect.egg-info/SOURCES.txt'
+[4.243s] reading manifest file 'robber_detect.egg-info/SOURCES.txt'
+[4.244s] writing manifest file 'robber_detect.egg-info/SOURCES.txt'
+[4.316s] Built target ament_cmake_python_build_robber_detect_egg
+[4.355s] Invoked command in '/home/tolasing/main_ws/ai_ws/build/robber_detect' returned '0': CMAKE_PREFIX_PATH=/home/tolasing/main_ws/dev_ws/install/motor_control:/home/tolasing/main_ws/dev_ws/install/imu_node:/opt/ros/humble:/home/tolasing/main_ws/dev_ws/install/serial:/home/tolasing/main_ws/dev_ws/install/ros2_mapping:/home/tolasing/main_ws/dev_ws/install/prototype:/home/tolasing/main_ws/dev_ws/install/plane:/home/tolasing/main_ws/dev_ws/install/navigator_planner:/home/tolasing/main_ws/dev_ws/install/depthai:/home/tolasing/main_ws/dev_ws/install/asio_cmake_module:/home/tolasing/main_ws/ai_ws/install/robber_detect /usr/bin/cmake --build /home/tolasing/main_ws/ai_ws/build/robber_detect -- -j8 -l8
+[4.458s] Invoking command in '/home/tolasing/main_ws/ai_ws/build/robber_detect': CMAKE_PREFIX_PATH=/home/tolasing/main_ws/dev_ws/install/motor_control:/home/tolasing/main_ws/dev_ws/install/imu_node:/opt/ros/humble:/home/tolasing/main_ws/dev_ws/install/serial:/home/tolasing/main_ws/dev_ws/install/ros2_mapping:/home/tolasing/main_ws/dev_ws/install/prototype:/home/tolasing/main_ws/dev_ws/install/plane:/home/tolasing/main_ws/dev_ws/install/navigator_planner:/home/tolasing/main_ws/dev_ws/install/depthai:/home/tolasing/main_ws/dev_ws/install/asio_cmake_module:/home/tolasing/main_ws/ai_ws/install/robber_detect /usr/bin/cmake --install /home/tolasing/main_ws/ai_ws/build/robber_detect
+[4.475s] -- Install configuration: ""
+[4.476s] -- Execute custom install script
+[4.477s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/2detect.py
+[4.498s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/__pycache__/cvfpscalc.cpython-310.pyc
+[4.519s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/__pycache__/utils.cpython-310.pyc
+[4.545s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/cvfpscalc.py
+[4.565s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/detect.py
+[4.586s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/flamethrower.py
+[4.606s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/nav_2_dock.py
+[4.627s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/object_broadcast.py
+[4.651s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/test.py
+[4.671s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/scripts/utils.py
+[4.692s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/__init__.py
+[4.721s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/en_US-amy-medium.onnx
+[4.757s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/en_US-amy-medium.onnx.json
+[4.778s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/en_en_US_amy_medium_MODEL_CARD
+[4.799s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/robber.tflite
+[4.831s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/robber2.tflite
+[4.863s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/robber3.tflite
+[4.891s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/robber5.tflite
+[4.916s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/robber6.tflite
+[4.947s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/robber_detect/voice_.py
+[4.976s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/launch/flamethrower.launch.py
+[4.996s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/pythonpath.sh
+[5.018s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/pythonpath.dsv
+[5.047s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect-0.0.0-py3.10.egg-info/PKG-INFO
+[5.069s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect-0.0.0-py3.10.egg-info/SOURCES.txt
+[5.089s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect-0.0.0-py3.10.egg-info/dependency_links.txt
+[5.115s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect-0.0.0-py3.10.egg-info/top_level.txt
+[5.137s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/__init__.py
+[5.162s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/en_US-amy-medium.onnx
+[5.187s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/en_US-amy-medium.onnx.json
+[5.216s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/en_en_US_amy_medium_MODEL_CARD
+[5.238s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/robber.tflite
+[5.262s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/robber2.tflite
+[5.282s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/robber3.tflite
+[5.308s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/robber5.tflite
+[5.332s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/robber6.tflite
+[5.355s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/voice_.py
+[5.382s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/lib/robber_detect/2detect.py
+[5.404s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/lib/robber_detect/flamethrower.py
+[5.426s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/ament_index/resource_index/package_run_dependencies/robber_detect
+[5.452s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/ament_index/resource_index/parent_prefix_path/robber_detect
+[5.474s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/ament_prefix_path.sh
+[5.512s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/ament_prefix_path.dsv
+[5.536s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/path.sh
+[5.559s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/environment/path.dsv
+[5.582s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/local_setup.bash
+[5.610s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/local_setup.sh
+[5.635s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/local_setup.zsh
+[5.659s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/local_setup.dsv
+[5.685s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/package.dsv
+[5.706s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/ament_index/resource_index/packages/robber_detect
+[5.730s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/cmake/robber_detectConfig.cmake
+[5.756s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/cmake/robber_detectConfig-version.cmake
+[5.781s] -- Symlinking: /home/tolasing/main_ws/ai_ws/install/robber_detect/share/robber_detect/package.xml
+[5.881s] Listing '/home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect'...
+[5.882s] Compiling '/home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/__init__.py'...
+[5.882s] Compiling '/home/tolasing/main_ws/ai_ws/install/robber_detect/local/lib/python3.10/dist-packages/robber_detect/voice_.py'...
+[5.897s] Invoked command in '/home/tolasing/main_ws/ai_ws/build/robber_detect' returned '0': CMAKE_PREFIX_PATH=/home/tolasing/main_ws/dev_ws/install/motor_control:/home/tolasing/main_ws/dev_ws/install/imu_node:/opt/ros/humble:/home/tolasing/main_ws/dev_ws/install/serial:/home/tolasing/main_ws/dev_ws/install/ros2_mapping:/home/tolasing/main_ws/dev_ws/install/prototype:/home/tolasing/main_ws/dev_ws/install/plane:/home/tolasing/main_ws/dev_ws/install/navigator_planner:/home/tolasing/main_ws/dev_ws/install/depthai:/home/tolasing/main_ws/dev_ws/install/asio_cmake_module:/home/tolasing/main_ws/ai_ws/install/robber_detect /usr/bin/cmake --install /home/tolasing/main_ws/ai_ws/build/robber_detect
