@@ -6,6 +6,8 @@ import math
 from tkinter import *
 import random
 import itertools
+from PIL import Image, ImageTk, ImageSequence
+
 
 
 
@@ -60,86 +62,27 @@ class FacePlayerCars():
         self.iris_r=None
 
         self.counter = 0
+        self.gif_path = '/home/tolasing/Downloads/blinking.gif'  # Update this to the path of your GIF
+        self.gif = Image.open(self.gif_path)
+        self.gif_frames = [ImageTk.PhotoImage(img) for img in ImageSequence.Iterator(self.gif)]
 
-
-        self.iris_l = self.canvas.create_rectangle(self.left_centre - self.iris_size/2, 
-                                                self.y_centre - self.iris_size/2, 
-                                                self.left_centre + self.iris_size/2, 
-                                                self.y_centre + self.iris_size/2,
-                                                fill=self.iris_colour)
-
-        self.iris_r = self.canvas.create_rectangle(self.right_centre - self.iris_size/2, 
-                self.y_centre - self.iris_size/2, 
-                self.right_centre + self.iris_size/2, 
-                self.y_centre + self.iris_size/2,
-                fill=self.iris_colour)
-
-        self.mouth_width = self.nom_x(300)
-        self.mouth_height = self.nom_y(100)
-        self.mouth_bottom = self.nom_y(400) + self.nom_y(50)
-        self.mouth_left = self.x_centre - self.mouth_width / 2
-        self.mouth_right = self.x_centre + self.mouth_width / 2
-
-
-
-        # Create mouth
-        self.mouth = self.canvas.create_rectangle(self.mouth_left, self.mouth_bottom - self.mouth_height, 
-                                            self.mouth_right, self.mouth_bottom, 
-                                            fill='teal', outline='teal')
+        self.current_frame = 0
+        self.gif_label = None
     
     
     def update_image(self):
 
         self.tk.update()
-        self.counter += 1
-
-        if self.counter % 10 == 0:  # Check if the counter is divisible by 4
-                # Mouth closed
-                self.iris_size = self.nom_x(0)
-               # self.mouth_height = self.nom_y(10)
-                #self.mouth_width = self.nom_x(300)
+        if self.gif_label:
+            self.canvas.itemconfig(self.gif_label, image=self.gif_frames[self.current_frame])
         else:
-            # Mouth fully open
-            self.iris_size = self.nom_x(150)
-            #self.mouth_height = self.nom_y(100)
-            #self.mouth_width = self.nom_x(300)
+            self.gif_label = self.canvas.create_image(self.width // 2, self.height // 2, image=self.gif_frames[self.current_frame], anchor=CENTER)
 
+        # Update the frame index
+        self.current_frame = (self.current_frame + 1) % len(self.gif_frames)
 
-            
-        self.canvas.coords(
-            self.iris_l,
-            self.left_centre - self.iris_size/2,
-            self.y_centre - self.iris_size/2,
-            self.left_centre + self.iris_size/2,
-            self.y_centre + self.iris_size/2
-        )
-
-        self.canvas.coords(
-            self.iris_r,
-            self.right_centre - self.iris_size/2,
-            self.y_centre - self.iris_size/2,
-            self.right_centre + self.iris_size/2,
-            self.y_centre + self.iris_size/2
-        )
-
-        self.canvas.coords(
-        self.mouth,
-        self.x_centre - self.mouth_width / 2,
-        self.mouth_bottom - self.mouth_height,
-        self.x_centre + self.mouth_width / 2,
-        self.mouth_bottom
-    )
-
-
-        
-        self.set_pupil_centre('l', 0)  # Close left eye
-        self.set_pupil_centre('r', 0)  # Close right eye
-
-        
-
-    
-            
-        
+        # Schedule the next update
+        self.tk.after(500, self.update_image)  # Adjust the delay as needed
    
     def end_fullscreen(self, event=None):
         self.tk.attributes("-fullscreen", False)

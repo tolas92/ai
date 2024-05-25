@@ -30,15 +30,15 @@ print()
 
 # Load Dataset
 train_data = object_detector.DataLoader.from_pascal_voc(
-    'android_figurine/train',
-    'android_figurine/train',
-    ['android', 'pig_android']
+    'robber/train',
+    'robber/train',
+    ['robber', 'tolasing_ganesh']
 )
 
 val_data = object_detector.DataLoader.from_pascal_voc(
-    'android_figurine/validate',
-    'android_figurine/validate',
-    ['android', 'pig_android']
+    'robber/validate',
+    'robber/validate',
+    ['robber', 'tolasing_ganesh']
 )
 
 # Load model spec
@@ -48,8 +48,10 @@ spec = object_detector.EfficientDetSpec(
   model_dir='/content/checkpoints',
   hparams={'max_instances_per_image': 8000})
 
+spec2=model_spec.get('efficientdet_lite4')
+
 # Train the model
-model = object_detector.create(train_data, model_spec=spec, batch_size=4, train_whole_model=True, epochs=20, validation_data=val_data)
+model = object_detector.create(train_data, model_spec=spec2, batch_size=4, train_whole_model=True, epochs=20, validation_data=val_data)
 
 # Evaluate the model
 eval_result = model.evaluate(val_data)
@@ -63,10 +65,10 @@ for label, metric_value in eval_result.items():
 print()
 
 # Export the model
-model.export(export_dir='.', tflite_filename='android.tflite')
+model.export(export_dir='.', tflite_filename='robber7.tflite')
 
 # Evaluate the tflite model
-tflite_eval_result = model.evaluate_tflite('android.tflite', val_data)
+tflite_eval_result = model.evaluate_tflite('robber7.tflite', val_data)
 
 # Print COCO metrics for tflite
 print("COCO metrics tflite")

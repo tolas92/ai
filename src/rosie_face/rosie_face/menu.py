@@ -7,6 +7,7 @@ import math
 from tkinter import *
 import random
 import itertools
+from PIL import Image, ImageTk, ImageSequence
 
 class ButtonPage():
   
@@ -14,7 +15,13 @@ class ButtonPage():
     def __init__(self, root):
         self.tk = Frame(root)
         self.tk.pack(expand=True, fill="both")
+        self.width=1280
+        self.height=1080
 
+        self.canvas = Canvas(self.tk, width=self.width, height=self.height)
+        self.canvas.pack(anchor='nw')
+        self.canvas.configure(bg='white')
+       
         self.tk.configure(bg="white")
         self.tk.rowconfigure(tuple(range(1)), weight=1)
         self.tk.columnconfigure(tuple(range(1)), weight=1)
@@ -22,76 +29,27 @@ class ButtonPage():
         self.col_b = "red"
         button_width = 10  # Set the width of the buttons
         button_height = 5 
-        self.idli=None
-        self.dosa=None
-        self.order_picked=False
-        # Create buttons for Idli
-        self.idli_button = Button(
-            self.tk, text="Idli",
-              command=self.idli_selected,
-                bg=self.col_a,
-                  fg="white", 
-                    width=button_width,
-                     height=button_height,
-                       font=("Arial", 30))
-        self.idli_button.pack(
-            side="top",
-              anchor="center",
-                pady=50)
-        
-        #Create button for dosa
-        self.dosa_button = Button(
-            self.tk, text="Dosa",
-              command=self.dosa_selected,
-                activebackground="red",
-                  activeforeground="white",
-                    bg=self.col_a,
-                      fg="white",
-                        width=button_width,
-                          height=button_height,
-                            font=("Arial", 30))
-        self.dosa_button.pack(side="top", anchor="center",pady=50)
+        self.counter = 0
+        self.gif_path = '/home/tolasing/Downloads/speaking.gif'  # Update this to the path of your GIF
+        self.gif = Image.open(self.gif_path)
+        self.gif_frames = [ImageTk.PhotoImage(img) for img in ImageSequence.Iterator(self.gif)]
 
-        self.order_picked_button = Button(
-            self.tk, text="Order Picked",
-              command=self.order_picked_callback,
-                bg=self.col_a, 
-                fg="white",
-                  width=button_width,
-                    height=button_height,
-                     font=("Arial", 30))
-        self.order_picked_button.pack(side="top", anchor="center", pady=50)
-        
-        # Label to display selection message
-        self.label = Label(root, text="")
-        self.label.pack(pady=10)
+        self.current_frame = 0
+        self.gif_label = None
 
-    def order_picked_callback(self):
-               # self.order_picked_button.config(state=DISABLED)
-            self.order_picked=True  # Disable the button after the order is picked
-        
-    def idli_selected(self):
-        self.label.config(text="You selected: Idli")
-        self.idli=1
-        print({self.idli})
-
-    def dosa_selected(self):
-        self.label.config(text="You selected: Dosa")
-        self.dosa=1
 
     def update_image(self):
         self.tk.update()
+        if self.gif_label:
+            self.canvas.itemconfig(self.gif_label, image=self.gif_frames[self.current_frame])
+        else:
+            self.gif_label = self.canvas.create_image(self.width // 2, self.height // 2, image=self.gif_frames[self.current_frame], anchor=CENTER)
 
+        # Update the frame index
+        self.current_frame = (self.current_frame + 1) % len(self.gif_frames)
 
-    def button_down(self, widget):
-        widget.config(relief = "sunken")
-        widget["bg"] = self.col_b
-
-
-    def button_up(self, widget):
-        widget.config(relief = "raised")
-        widget["bg"] = self.col_a
-        widget.invoke()
+        # Schedule the next update
+        self.tk.after(500, self.update_image)  # Adjust the delay as needed
 
     def destroy(self):
         self.tk.destroy()

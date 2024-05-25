@@ -29,23 +29,8 @@ class UiNode(Node):
         # ROS2 publisher and subscribers
         self.subscription = self.create_subscription(Twist, '/diff_controller/cmd_vel_unstamped', self.cmd_vel_callback, 10)
         self.publisher=self.create_publisher(Food,'final_order',10)
-        self.sub=self.create_subscription(String,'/rosie_face',self.update_mouth,10)
-
-        #ROS2 Action servers
-        self.action_=ActionServer(
-            self,FoodMenu,'FoodMenu', 
-             execute_callback=self.foodmenu_callback,
-                callback_group=ReentrantCallbackGroup(),
-                    goal_callback=self.goal_callback,
-                            cancel_callback=self.cancel_callback)
-        self.action_=ActionServer(
-            self,FoodMenu,'Table',
-              execute_callback=self.table_callback,
-                callback_group=ReentrantCallbackGroup(),
-                    goal_callback=self.goal_callback,
-                        cancel_callback=self.cancel_callback)
-
-    
+        self.sub=self.create_subscription(String,'/ai_speaking',self.update_mouth,10)
+   
         self.ttk = Tk()
         self.ttk.title("Bot UI")
         self.ttk.geometry("1024x600+0+0")
@@ -60,7 +45,7 @@ class UiNode(Node):
 
         self.ttk.rowconfigure(0, weight=1)
         self.ttk.columnconfigure(0, weight=1)
-
+ 
         self.face_page = None
         self.button_page = None
         self.button=None
@@ -99,24 +84,8 @@ class UiNode(Node):
 
         return
     def update_mouth(self,msg):
-        self.counter += 1
-
-        if self.counter % 10 == 0:  # Check if the counter is divisible by 4
-                # Mouth closed
-               # self.iris_size = self.nom_x(150)
-                self.face_page.mouth_height = self.nom_y(10)
-                self.face_page.mouth_width = self.nom_x(300)
-        elif self.counter % 5 == 2:  # Check if the counter is divisible by 4 with a remainder of 2
-            # Mouth partially open with smaller width
-            #self.iris_size = self.nom_x(150)
-            self.face_page.mouth_height = self.nom_y(100)
-            self.face_page.mouth_width = self.nom_x(150)
-        else:
-            # Mouth fully open
-          #  self.iris_size = self.nom_x(0)
-            self.face_page.mouth_height = self.nom_y(100)
-            self.face_page.mouth_width = self.nom_x(300)
-
+        self.destroy_face_page()
+        self.build_button_page()
         
     def cmd_vel_callback(self, cmd_vel):
         
@@ -131,95 +100,12 @@ class UiNode(Node):
 
     def destroy_button_page(self):
         self.button_page.destroy()
-        self.button_page = None
-
-    
-    async def foodmenu_callback(self,goal_handle):
-        feedback_msg=FoodMenu.Feedback()
-        end_time=time.time()+5
-        self.button=True
-        time.sleep(1)
-        while self.button_page.idli is None:
-              
-              feedback_msg.waiting="going"
-              goal_handle.publish_feedback(feedback_msg)
-              print(feedback_msg.waiting)
-        msg=Food()
-        msg.table_number=100
-        msg.food_type="idli"
-        msg.qty=self.button_page.idli
-        self.publisher.publish(msg)
-        print(msg.food_type)
-        # If either idli or dosa is not None, succeed the goal
-        goal_handle.succeed()
-        result=FoodMenu.Result()
-        result.done=True
-        self.button_page.idli=None
-        self.face=True
-                      
-        return result      
-
-    async def table_callback(self,goal_handle):
-        feedback_msg=FoodMenu.Feedback()
-        end_time=time.time()+5
-        self.button=True
-        time.sleep(1)
-        while self.button_page.order_picked is False:
-              
-              feedback_msg.waiting="going"
-              goal_handle.publish_feedback(feedback_msg)
-              print(feedback_msg.waiting)
-
-        goal_handle.succeed()
-        result=FoodMenu.Result()
-        result.done=True
-        self.button_page.order_picked=False
-        self.face=True
-                      
-        return result   
-    
-        
-    
-    def goal_callback(self,goal_request):
-        self.get_logger().info("goal request")
-        
-        return GoalResponse.ACCEPT
-
-    def cancel_callback(self, goal_handle):
-        """Accept or reject a client request to cancel an action."""
-        self.get_logger().info('Received cancel request')
-        return CancelResponse.ACCEPT
-    
-   # def update_image_callback(self):
-        # Callback function for the timer to update the image
-    #    self.update_image()
-    def nom_x(self, val):
-        return math.floor(val * self.face_page.width/self.face_page.nomwidth)
-
-    def nom_y(self, val):
-        return math.floor(val * self.face_page.height/self.face_page.nomheight)    
+        self.button_page = None 
     
 def main(args=None):
     
     rclpy.init(args=args)
     ui_node = UiNode()
-    """
-    def run_gui():
-        rclpy.spin(ui_node)
-        ui_node.destroy_node()
-        rclpy.shutdown()
-    gui_thread=Thread(target=run_gui)
-    gui_thread.start()
-    """
-    """
-    while rclpy.ok():
-        rclpy.spin_once(ui_node)
-        #ui_node.check_for_finished_calls()
-        ui_node.update_image()
-        time.sleep(0.01)
-    ui_node.destroy_node()
-    rclpy.shutdown()
-    """
     executor=MultiThreadedExecutor()
     while rclpy.ok():
 

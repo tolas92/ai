@@ -43,11 +43,9 @@ class RobberDetect(Node):
   def callback(self,image_msg):
 
     try:
-        cv_image=self.bridge.imgmsg_to_cv2(image_msg)
-        im=self.bridge.imgmsg_to_cv2(image_msg)
-        cv2.imshow('robber detection',im)
-
-        """
+          cv_image=self.bridge.imgmsg_to_cv2(image_msg)
+          im=self.bridge.imgmsg_to_cv2(image_msg)
+                  
         # Variables to calculate FPS
           counter, fps = 0, 0
           start_time = time.time()
@@ -62,7 +60,7 @@ class RobberDetect(Node):
 
           # Initialize the object detection model
           base_options = core.BaseOptions(
-              file_name='robber.tflite', use_coral=False, num_threads=4)
+              file_name='/home/tolasing/main_ws/ai_ws/src/robber_detect/robber_detect/yolo_1.tflite', use_coral=False, num_threads=4)
           detection_options = processor.DetectionOptions(
               max_results=3, score_threshold=0.3)
           options = vision.ObjectDetectorOptions(
@@ -95,8 +93,8 @@ class RobberDetect(Node):
               text_location = (left_margin, row_size)
               cv2.putText(cv_image, fps_text, text_location, cv2.FONT_HERSHEY_PLAIN,
                           font_size, text_color, font_thickness)
-          #cv2.imshow('robber detection',im)  
-        """   
+          cv2.imshow('robber detection',im)  
+        
     except CvBridgeError as error:
       print(error)
 

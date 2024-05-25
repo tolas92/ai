@@ -23,7 +23,7 @@ class RobberDetection(Node):
         # unique node (using anonymous=True).
         super().__init__('robber_detection_recognition')
         self.publisher=self.create_publisher(String,"/person_detected",10)
-        self.subscription = self.create_subscription(Image,"/oak/rgb/image_raw",self.callback,10)
+        self.subscription = self.create_subscription(Image,"/image_raw",self.callback,10)
         # Publisher which will publish to the topic 
         self.bridge = CvBridge()
         self.cv_fps_calc = CvFpsCalc(buffer_len=10)
@@ -57,9 +57,9 @@ class RobberDetection(Node):
 
             # Initialize the object detection model
             base_options = core.BaseOptions(
-                file_name='/home/tolasing/main_ws/ai_ws/src/robber_detect/robber_detect/robber6.tflite', use_coral=False, num_threads=4)
+                file_name='/home/tolasing/main_ws/ai_ws/src/robber_detect/robber_detect/robber3.tflite', use_coral=False, num_threads=2)
             detection_options = processor.DetectionOptions(
-                max_results=3, score_threshold=0.2)
+                max_results=1, score_threshold=0.2)
             options = vision.ObjectDetectorOptions(
                 base_options=base_options, detection_options=detection_options)
             detector = vision.ObjectDetector.create_from_options(options)
@@ -91,7 +91,7 @@ class RobberDetection(Node):
                 fps = fps_avg_frame_count / (end_time - start_time)
                 start_time = time.time()
 
-                # Show the FPS
+                # Show th FPS
                 fps_text = 'FPS = {:.1f}'.format(fps)
                 text_location = (left_margin, row_size)
                 cv.putText(cv_image, fps_text, text_location, cv.FONT_HERSHEY_PLAIN,
